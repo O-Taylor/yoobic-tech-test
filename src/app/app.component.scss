@@ -117,3 +117,26 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+
+.circle {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+.logOut {
+  position: absolute;
+  bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

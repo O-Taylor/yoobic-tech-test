@@ -6,11 +6,19 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+// import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+// import {AppStoreModule} from 'src/store/AppStoreModule';
+import { HttpClientModule } from '@angular/common/http';
+
+import { StoreModule } from '@ngrx/store';
+import { cardsReducer } from "../store/cards/cards.reducers"
+
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,
+],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [StoreModule.forRoot({ cards: cardsReducer }), BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
