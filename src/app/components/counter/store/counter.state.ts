@@ -11,12 +11,13 @@ import { CounterStateModel } from './counter.state.model';
 
 
 
-
+// Setting up the state (For example data() in vue)
 @State<CounterStateModel>({
   name: 'counter',
   defaults: { count: 0, isLoading: true }
 })
 export class CounterState {
+  // Returning the data
   @Selector() 
   static count(state: CounterStateModel) {
     return state.count;
@@ -27,6 +28,7 @@ export class CounterState {
     return state.isLoading;
   }
 
+  // functions
   @Action(Initialize)
   initialize(
     context: StateContext<CounterStateModel>, 

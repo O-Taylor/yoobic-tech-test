@@ -1,3 +1,4 @@
+// Create action (function) called initialize 
 export class Initialize {
   static readonly type = '[Counter] Initialize';
   

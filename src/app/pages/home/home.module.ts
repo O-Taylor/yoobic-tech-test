@@ -11,11 +11,10 @@ import { HomePage } from './home.page';
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { CardsComponent } from '../../components/cards/cards.component';
+import { CardsModule } from '../../components/cards/cards.module';
 
 import { CounterModule } from '../../components/counter/counter.module';
 import { NgxsModule } from '@ngxs/store';
-
 
 @Component({
   selector: 'app-root',
@@ -29,14 +28,15 @@ import { NgxsModule } from '@ngxs/store';
     IonicModule,
     HomePageRoutingModule,
     CounterModule,
-    NgxsModule.forRoot([], {selectorOptions: {suppressErrors: false}})
+    CardsModule,
+    NgxsModule.forRoot([], { selectorOptions: { suppressErrors: false } }),
   ],
-  declarations: [HomePage, CardsComponent]
+  declarations: [HomePage],
 })
 export class HomePageModule {
-  cards$: Observable<string>
+  cards$: Observable<string>;
 
   constructor(private store: Store<{ cards: string }>) {
-    this.cards$ = store.select('cards')
+    this.cards$ = store.select('cards');
   }
 }
