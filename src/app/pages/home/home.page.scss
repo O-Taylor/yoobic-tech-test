@@ -1,0 +1,28 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  h2 {
+    font-size: 15px;
+    margin: 0;
+  }
+}
+.navItem {
+  display: flex;
+  font-size: 12px;
+  text-align: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  p {
+    font-size: 11px;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #8a9fb2;
+  }
+}
