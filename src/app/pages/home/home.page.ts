@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
   testCharacters: any[];
-  episodesArray: any[];
 
   constructor() {}
 
@@ -23,16 +22,6 @@ export class HomePage implements OnInit {
           return;
         }
         this.testCharacters = data.results;
-      });
-  }
-  episodeApi() {
-    fetch('https://rickandmortyapi.com/api/episode/28')
-      .then((response) => (response.status === 200 ? response.json() : null))
-      .then((data) => {
-        if (!data) {
-          return;
-        }
-        this.episodesArray = data.results;
       });
   }
 }
