@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsPage implements OnInit {
   singleCharacter: Object;
+  episodes: Object;
 
   constructor() {}
 
   ngOnInit() {
     this.getApi();
+    this.episodeApi();
   }
   getApi() {
     fetch(
@@ -27,6 +29,21 @@ export class DetailsPage implements OnInit {
         this.singleCharacter = data;
 
         console.log('this.singleCharacter', this.singleCharacter);
+      });
+  }
+
+  episodeApi() {
+    fetch(
+      'https://rickandmortyapi.com/api/episode/' +
+        window.location.href.split('?')[1].replace('=', '')
+    )
+      .then((response) => (response.status === 200 ? response.json() : null))
+      .then((data) => {
+        if (!data) {
+          return;
+        }
+        this.episodes = data;
+        console.log('this.episodes', this.episodes);
       });
   }
 }

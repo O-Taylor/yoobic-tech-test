@@ -19,7 +19,7 @@
       font-size: 15px;
     }
     ion-card-subtitle {
-      font-size: 8px;
+      font-size: 12px;
     }
   }
   .dateAndTime {
@@ -42,10 +42,10 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  img {
+    border-radius: 20px;
+  }
   ion-card-content {
     padding: 0;
   }
-}
-a {
-  text-decoration: none;
 }
