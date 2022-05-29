@@ -3,22 +3,32 @@
     <div class="userDetails">
       <div class="circle"></div>
       <div class="user">
-        <ion-card-title>{{ gender$ | async }}</ion-card-title>
-        <ion-card-subtitle>Paris, France</ion-card-subtitle>
+        <ion-card-title>{{ character.name }}</ion-card-title>
+        <!-- <div *ngFor="let x of character">
+          <p>{{ x }}</p>
+        </div> -->
+        <!-- 
+        <li *ngFor="let single of testCharacters; index as i">
+          <p>test: {{ single.name }}</p>
+        </li> -->
+
+        <ion-card-subtitle
+          >{{ character.gender }},
+          {{ character.location.name }}</ion-card-subtitle
+        >
       </div>
       <div class="dateAndTime">
-        <ion-card-subtitle>12 jan 2016</ion-card-subtitle>
-        <ion-card-subtitle>2miles</ion-card-subtitle>
+        <ion-card-subtitle>Species: {{ character.species }}</ion-card-subtitle>
+        <ion-card-subtitle>Status: {{ character.status }}</ion-card-subtitle>
       </div>
     </div>
   </ion-card-header>
   <div class="image">
     <ion-card-content>
-      <img src="assets/img/missingimage.jpg" alt="" />
+      <img src="{{ character.image }}" alt="" />
     </ion-card-content>
   </div>
   <ion-card-content>
-    Keep close to Nature's heart... and break clear away, once in awhile, and
-    climb a mountain or spend a week in the woods. Wash your spirit clean.
+    Origin Location: {{ character.origin.name }}
   </ion-card-content>
 </ion-card>

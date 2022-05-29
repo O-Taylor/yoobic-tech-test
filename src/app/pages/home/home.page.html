@@ -28,6 +28,8 @@
 </ion-header>
 
 <ion-content>
-  <counter></counter>
-  <cards></cards>
+  <cards
+    *ngFor="let single of testCharacters; index as i"
+    [character]="single"
+  ></cards>
 </ion-content>
