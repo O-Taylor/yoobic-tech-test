@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -26,27 +26,29 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .container {
-    padding: 20px;
-    height: 100%;
+  padding: 20px;
+  height: 100%;
 }
 
 .circle {
-    margin-top: 75px;
-    border-radius: 50px;
-    height: 100px;
-    width: 100px;
-    background-color: #444444;
- margin: 0;
-margin: auto;
+  margin-top: 75px;
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+  background-color: #444444;
+  margin: 0;
+  margin: auto;
+  background-image: url("https://i.pinimg.com/564x/6b/81/a1/6b81a1049b32cfa0fe2038fbc0a6d097.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 ion-content {
-
-    --ion-background-color: #E0E3EB;
+  --ion-background-color: #e0e3eb;
 }

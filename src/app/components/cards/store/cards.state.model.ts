@@ -1,5 +1,5 @@
 export interface CardsStateModel {
-  people: any;
+  people: Array<object>;
   name: string;
   gender: string;
   type: string;

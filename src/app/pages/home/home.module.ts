@@ -13,7 +13,6 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { CardsModule } from '../../components/cards/cards.module';
 
-import { CounterModule } from '../../components/counter/counter.module';
 import { NgxsModule } from '@ngxs/store';
 
 @Component({
@@ -27,7 +26,7 @@ import { NgxsModule } from '@ngxs/store';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    CounterModule,
+
     CardsModule,
     NgxsModule.forRoot([], { selectorOptions: { suppressErrors: false } }),
   ],
