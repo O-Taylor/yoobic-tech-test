@@ -24,26 +24,21 @@
       <ion-card-title><p>{{ singleCharacter.name }}</p></ion-card-title>
     </ion-card-header>
 
-    <ion-card-content
-      ><p>Status: {{ singleCharacter.status }}</p></ion-card-content
-    >
-    <ion-card-content
-      ><p>Species: {{ singleCharacter.species }}</p></ion-card-content
-    >
-    <ion-card-content
-      ><p>Gender: {{ singleCharacter.gender }}</p></ion-card-content
-    >
-    <ion-card-content
-      ><p>Origin: {{ singleCharacter.origin.name }}</p></ion-card-content
-    >
-    <ion-card-content
-      ><p>Location: {{ singleCharacter.location.name }}</p></ion-card-content
-    >
+    <ion-card-content>
+      <p>Status: {{ singleCharacter.status }}</p>
+      <p>Species: {{ singleCharacter.species }}</p>
+      <p>Gender: {{ singleCharacter.gender }}</p>
+      <p>Origin: {{ singleCharacter.origin.name }}</p>
+      <p>Location: {{ singleCharacter.location.name }}</p>
+    </ion-card-content>
+
     <ion-card-header>
-      <ion-card-title> <p>Episodes</p></ion-card-title>
+      <ion-card-title> <p>Episode</p></ion-card-title>
     </ion-card-header>
-    <ion-card-content>{{episodes.name}}</ion-card-content>
-    <ion-card-content>{{episodes.air_date}}</ion-card-content>
-    <ion-card-content>{{episodes.episode}}</ion-card-content>
+    <ion-card-content>
+      <p>{{episodes.name}}</p>
+      <p>{{episodes.air_date}}</p>
+      <p>{{episodes.episode}}</p>
+    </ion-card-content>
   </ion-card>
 </ion-content>
